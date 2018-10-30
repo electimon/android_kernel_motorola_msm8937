@@ -62,6 +62,14 @@ config QCOM_GLINK_SSR
 	  implements the SSR protocol for notifying the remote processor about
 	  neighboring subsystems going up or down.
 
+config SURFNA_DTB
+        depends on ARCH_QCOM
+        default n
+        bool "SurfNA DTBs"
+        help
+          Only include SurfNA specific DTBs to limit the number that
+          get built during kernel compilation.
+
 config QCOM_CPUSS_DUMP
 	bool "CPU Subsystem Dumping support"
 	help
