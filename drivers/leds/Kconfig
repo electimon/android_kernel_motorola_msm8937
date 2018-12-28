@@ -752,6 +752,15 @@ config LEDS_MLXREG
 	  device add call. Say Y to enable these. To compile this driver as a
 	  module, choose 'M' here: the module will be called leds-mlxreg.
 
+config LEDS_ATC
+        tristate "Support for PMIC ATC LED"
+        depends on LEDS_CLASS && SPMI
+        help
+          This driver supports the ATC led functionality of Qualcomm PNP PMIC.
+          Creates standard LED interface for the auto trickle charge indication
+          LED. SPMI register write is used to access PMIC control register.
+          Device tree can be used to adjust control register address used.
+
 config LEDS_USER
 	tristate "Userspace LED support"
 	depends on LEDS_CLASS
