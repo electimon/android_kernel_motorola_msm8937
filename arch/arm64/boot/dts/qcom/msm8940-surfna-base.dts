@@ -39,6 +39,7 @@
 	/delete-node/ cam_sensor_front_sleep;
 	/delete-node/ cam_sensor_front1_default;
 	/delete-node/ cam_sensor_front1_sleep;
+	/delete-node/ tlmm_gpio_key;
 };
 
 /* camera flash and gpio 50 */
@@ -99,6 +100,10 @@
 
 &thermal_zones {
 	/delete-node/ quiet-therm-adc;
+	/delete-node/ pa-therm1-adc;
+	/delete-node/ case-therm-adc;
+	/delete-node/ pa-therm0-adc;
+	/delete-node/ xo-therm-adc;
 };
 
 &qpnp_smbcharger {
