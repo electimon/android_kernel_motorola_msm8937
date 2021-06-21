@@ -1,4 +1,5 @@
-/* Copyright (c) 2018, Motorola Mobility Inc. All rights reserved.
+/*
+ * Copyright (c) 2018, The Linux Foundation. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -9,18 +10,16 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  */
+#include "pmi8940.dtsi"
 
-/dts-v1/;
-/plugin/;
-
-#include <dt-bindings/clock/qcom,gcc-sdm429w.h>
-#include <dt-bindings/clock/qcom,rpmcc.h>
-#include <dt-bindings/clock/mdss-28nm-pll-clk-legacy.h>
-#include <dt-bindings/clock/qcom,cpu-sdm.h>
-#include "msm8940-surfna-common-overlay.dtsi"
-
-/ {
-	model = "surfna";
-	qcom,msm-id = <313 0x0>;
-	qcom,board-id = <0x48 0xA000>, <0x49 0xA000>;
+&soc {
+	led_flash0: qcom,camera-flash {
+		cell-index = <0>;
+		compatible = "qcom,camera-flash";
+		qcom,flash-type = <1>;
+		qcom,flash-source = <&pmi8940_flash0 &pmi8940_flash1>;
+		qcom,torch-source = <&pmi8940_torch0 &pmi8940_torch1>;
+		qcom,switch-source = <&pmi8940_switch>;
+	};
 };
+
