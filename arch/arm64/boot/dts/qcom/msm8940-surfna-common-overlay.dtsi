@@ -258,9 +258,6 @@
 	};
 };
 
-<<<<<<< HEAD
-=======
-
 &pmi8940_vadc {
 	chan@10 {
 		label = "host_det";
@@ -360,7 +357,6 @@
         };
 };
 
->>>>>>> 158a0066e66d... arm64/dts: moto charging driver dts configuration for surf.
 &dai_mi2s4 {
 	compatible = "qcom,msm-dai-q6-mi2s";
 	qcom,msm-dai-q6-mi2s-dev-id = <4>;
